@@ -13,8 +13,8 @@ import { Marker } from './models/marker.model';
 export class AppComponent implements OnInit {
   title = 'ang-maps';
   zoom: number = 12;
-  geoJsonObject: GeoFeatureCollection; //Oggetto che conterrà il vettore di GeoJson
-  fillColor: string = "#FF0000";  //Colore delle zone catastali
+  geoJsonObject: GeoFeatureCollection;
+  fillColor: string = "#FF0000";
   obsGeoData: Observable<GeoFeatureCollection>;
   lng: number = 9.205331366401035;
   lat: number = 45.45227445505016;
@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
     this.obsGeoData = this.http.get<GeoFeatureCollection>("https://3000-d612bb3c-da59-4978-90bf-c5b77d1b4039.ws-eu01.gitpod.io/");
     this.obsGeoData.subscribe(this.prepareData);
 
-    this.obsCiVett = this.http.get<Ci_vettore[]>("https://3000-d612bb3c-da59-4978-90bf-c5b77d1b4039.ws-eu01.gitpod.io/ci_vettore/90");
+    this.obsCiVett = this.http.get<Ci_vettore[]>("https://3000-d612bb3c-da59-4978-90bf-c5b77d1b4039.ws-eu01.gitpod.io/ci_vettore/123");
     this.obsCiVett.subscribe(this.prepareCiVettData);
 
     console.log(this.markers)
