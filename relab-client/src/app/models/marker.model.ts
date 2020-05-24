@@ -1,57 +1,68 @@
+import { Icon } from './icon.model';
+
 export class Marker {
     icon = {}
-
     constructor(public lat: number, public lng: number, public label?: string)
     {
         if (this.label.includes("Gas"))
         {
-            this.icon = { url: './assets/img/gas.ico' };
+            this.icon = new Icon ( './assets/img/gas.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("elettrica"))
         {
-            this.icon = { url: './assets/img/eletrica.ico' };
+            this.icon = new Icon ( './assets/img/eletrica.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("Gasolio"))
         {
-            this.icon = { url: './assets/img/Gasolio.ico' };
+            this.icon = new Icon ( './assets/img/Gasolio.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("Teleriscaldamento"))
         {
-            this.icon = { url: './assets/img/Telerisccaldamento.ico' };
+            this.icon = new Icon ( './assets/img/Telerisccaldamento.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("GPL"))
         {
-            this.icon = { url: './assets/img/GPL.ico' };
+            this.icon = new Icon ( './assets/img/GPL.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("NULL"))
         {
-            this.icon = { url: './assets/img/NULL.ico' };
+            this.icon = new Icon ( './assets/img/NULL.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("solide"))
         {
-            this.icon = { url: './assets/img/biomass.ico' };
+            this.icon = new Icon ( './assets/img/biomass.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("RSU"))
         {
-            this.icon = { url: './assets/img/RSU.ico' };
+            this.icon = new Icon ( './assets/img/RSU.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("liquide"))
         {
-            this.icon = { url: './assets/img/biomassal.ico' };
+            this.icon = new Icon ( './assets/img/biomassal.ico', 24 );
             this.label = "";
+            return;
         }
         if(this.label.includes("Olio"))
         {
-            this.icon = { url: './assets/img/olio.ico' };
+            this.icon = new Icon ( './assets/img/olio.ico', 24 );
             this.label = "";
+            return;
         }
     }
 }
